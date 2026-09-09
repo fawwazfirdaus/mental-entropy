@@ -1,80 +1,41 @@
-# autoresearch-macos
+# MES training experiments
 
-![teaser](progress.png)
+This directory contains the project's feature-weight optimization and supervised regression experiments. Despite its historical name, it is not a language-model pretraining framework and the regression scripts are not macOS-specific.
 
-*One day, frontier AI research used to be done by meat computers in between eating, sleeping, having other fun, and synchronizing once in a while using sound wave interconnect in the ritual of "group meeting". That era is long gone. Research is now entirely the domain of autonomous swarms of AI agents running across compute cluster megastructures in the skies. The agents claim that we are now in the 10,205th generation of the code base, in any case no one could tell if that's right or wrong as the "code" is now a self-modifying binary that has grown beyond human comprehension. This repo is the story of how it all began. -@karpathy, March 2026*.
+## Reproduce a training run
 
-The idea: give an AI agent a small but real LLM training setup and let it experiment autonomously overnight. It modifies the code, trains for 5 minutes, checks if the result improved, keeps or discards, and repeats. You wake up in the morning to a log of experiments and (hopefully) a better model. The training code here is a simplified single-GPU implementation of [nanochat](https://github.com/karpathy/nanochat). The core idea is that you're not touching any of the Python files like you normally would as a researcher. Instead, you are programming the `program.md` Markdown files that provide context to the AI agents and set up your autonomous research org. The default `program.md` in this repo is intentionally kept as a bare bones baseline, though it's obvious how one would iterate on it over time to find the "research org code" that achieves the fastest research progress, how you'd add more agents to the mix, etc. A bit more context on this project is here in this [tweet](https://x.com/karpathy/status/2029701092347630069).
-
-## How it works
-
-The repo is deliberately kept small and only really has a three files that matter:
-
-- **`prepare.py`** — fixed constants, one-time data prep (downloads training data, trains a BPE tokenizer), and runtime utilities (dataloader, evaluation). Not modified.
-- **`train.py`** — the single file the agent edits. Contains the full GPT model, optimizer (Muon + AdamW), and training loop. Everything is fair game: architecture, hyperparameters, optimizer, batch size, etc. **This file is edited and iterated on by the agent**.
-- **`program.md`** — baseline instructions for one agent. Point your agent here and let it go. **This file is edited and iterated on by the human**.
-
-By design, training runs for a **fixed 5-minute time budget** (wall clock, excluding startup/compilation), regardless of the details of your compute. The metric is **val_bpb** (validation bits per byte) — lower is better, and vocab-size-independent so architectural changes are fairly compared.
-
-## Quick start
-
-**Requirements:** Apple Silicon Mac (M1/M2/M3/M4 with Metal/MPS support) or a single NVIDIA GPU, Python 3.10+, [uv](https://docs.astral.sh/uv/).
+Run from the repository root in a separate checkout: training writes into `src/mental_entropy/models/_artifacts/`.
 
 ```bash
+uv sync --all-extras
 
-# 1. Install uv project manager (if you don't already have it)
-curl -LsSf https://astral.sh/uv/install.sh | sh
+# Compute features and document embeddings from the consensus CSV.
+# This can take substantial time; pretrained weights download on first use.
+PYTHONPATH=src .venv/bin/python autoresearch-macos/prepare.py
 
-# 2. Install dependencies
-uv sync
+# Fit the five dimension regressors and second-stage combiner.
+PYTHONPATH=src .venv/bin/python autoresearch-macos/train_v7_fep.py
 
-# 3. Download data and train tokenizer (one-time, ~2 min)
-uv run prepare.py
-
-# 4. Manually run a single training experiment (~5 min)
-uv run train.py
+# Produce evaluation metrics and control-example diagnostics.
+PYTHONPATH=src .venv/bin/python scripts/evaluate_locked_human_eval.py \
+  --output artifacts/eval/local_report.json --fail-on-gates
 ```
 
-If the above commands all work ok, your setup is working and you can go into autonomous research mode.
+The evaluation command returns a nonzero exit status when acceptance gates fail. It is a diagnostic, not a promise that the packaged or retrained model passes. Outputs are local and ignored by Git.
 
-**Platforms support**. This fork officially supports **macOS (Apple Silicon / MPS)** and CPU environments, while preserving the original NVIDIA GPU support. It removes the hardcoded dependency on FlashAttention-3, falling back to PyTorch's native Scaled Dot Product Attention (SDPA) with manual sliding window causal masking when needed. It also features MPS-specific optimizations (disabling unsupported `torch.compile` paths, lowering memory batch sizes for Metal bounds, and precisely casting optimizer states) allowing you to run autonomous research agents directly on your Mac!
+Preparation reads `data/multirater/consensus_labels.csv`, excludes designated evaluation indices, and writes features and embedding arrays into `features_cache.json`. Regenerate caches after changing labels or evaluation membership. Training consumes those caches; older cached labels must not be mixed with refreshed labels.
 
-## Running the agent
+## Experiment map
 
-Simply spin up your Claude/Codex or whatever you want in this repo (and disable all permissions), then you can prompt something like:
+- `train.py`: hand-crafted feature-weight search.
+- `train_embedding_regression.py`: direct embedding regression and feature comparisons.
+- `train_subscores*.py`: feature-based dimension models and ensemble variants.
+- `train_v7_fep.py`: packaged two-stage embedding model.
+- `train_v8_gd_calibrated.py`: global-disorder and calibration experiments.
+- `train_v9_gd_correction.py`: correction-model experiment.
+- `train_v10_constrained_combiner.py`: sign-constrained combiner experiment.
+- `diagnose*.py`: diagnostic analyses from earlier iterations.
 
-```
-Hi have a look at program.md and let's kick off a new experiment! let's do the setup first.
-```
+The later version numbers identify experiments, not automatically promoted improvements. The packaged manifest identifies the inference baseline. Historical result files may refer to earlier labels, data membership, or model choices and should not be compared without checking provenance.
 
-The `program.md` file is essentially a super lightweight "skill".
-
-## Project structure
-
-```
-prepare.py      — constants, data prep + runtime utilities (do not modify)
-train.py        — model, optimizer, training loop (agent modifies this)
-program.md      — agent instructions
-pyproject.toml  — dependencies
-```
-
-## Design choices
-
-- **Single file to modify.** The agent only touches `train.py`. This keeps the scope manageable and diffs reviewable.
-- **Fixed time budget.** Training always runs for exactly 5 minutes, regardless of your specific platform. This means you can expect approx 12 experiments/hour and approx 100 experiments while you sleep. There are two upsides of this design decision. First, this makes experiments directly comparable regardless of what the agent changes (model size, batch size, architecture, etc). Second, this means that autoresearch will find the most optimal model for your platform in that time budget. The downside is that your runs (and results) become not comparable to other people running on other compute platforms.
-- **Self-contained.** No external dependencies beyond PyTorch and a few small packages. No distributed training, no complex configs. One GPU, one file, one metric.
-
-## Platform support
-
-This code currently requires that you have a single NVIDIA GPU. In principle it is quite possible to support CPU, MPS and other platforms but this would also bloat the code. I'm not 100% sure that I want to take this on personally right now. People can reference (or have their agents reference) the full/parent nanochat repository that has wider platform support and shows the various solutions (e.g. a Flash Attention 3 kernels fallback implementation, generic device support, autodetection, etc.), feel free to create forks or discussions for other platforms and I'm happy to link to them here in the README in some new notable forks section or etc.
-
-If you're going to be using autoresearch on Apple Macbooks in particular, I'd recommend one of the forks below. On top of this, if you'd like half-decent results at such a small scale, I'd recommend this [TinyStories dataset](https://huggingface.co/datasets/karpathy/tinystories-gpt4-clean) which is cleaner than what exists out there otherwise. It should be a drop in replacement because I have encoded it in exactly the same format. Any of your favorite coding agents should be able to do the swap :)
-
-## Notable forks
-
-- [miolini/autoresearch-macos](https://github.com/miolini/autoresearch-macos)
-- [trevin-creator/autoresearch-mlx](https://github.com/trevin-creator/autoresearch-mlx)
-
-## License
-
-MIT
+The training script selects features and hyperparameters using development data. Its reported correlations are not a substitute for nested cross-validation and an untouched test set. See [research notes](../docs/research_notes.md).

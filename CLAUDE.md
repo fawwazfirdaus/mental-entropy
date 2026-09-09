@@ -388,8 +388,7 @@ Key points:
 - Constants in `UPPER_SNAKE_CASE`
 - Feature keys as `frozenset[str]`
 
-## Design System
-Always read DESIGN.md before making any visual or UI decisions.
-All font choices, colors, spacing, and aesthetic direction are defined there.
-Do not deviate without explicit user approval.
-In QA mode, flag any code that doesn't match DESIGN.md.
+## Research presentation
+
+The standalone project has no hosted application integration requirement.
+See `README.md` for usage and `docs/research_notes.md` for evaluation limitations.

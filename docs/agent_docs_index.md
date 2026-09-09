@@ -20,6 +20,8 @@ Use this file to choose the minimum docs needed for a task.
 | `docs/mes_architecture.md` | Target MES architecture and current-vs-planned boundaries. | Planning roadmap work; subscore/combiner design tasks. |
 | `README.md` | Public usage and feature overview. | User-facing docs updates; API usage examples. |
 
+- Research evaluation and reproduction: `docs/research_notes.md`, `autoresearch-macos/README.md`
+
 ## Fast Picks By Task
 
 - Test failures in feature modules: `docs/agent_style_guide.md`, `docs/codebase_mental_model.md`

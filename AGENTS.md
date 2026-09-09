@@ -105,3 +105,5 @@ Keep overlap consistent:
 - MES v10: sign-constrained final combiner alone can worsen locked MAE; inspect dimension models next.
 - MES ground-up: embeddings carry stronger global OE signal than individual feature families.
 - MES labels: consensus CSV must carry raw rater std; golden anchors drift after reaggregation.
+
+- Portfolio docs: verify packaged manifests; distinguish human-written text from human-annotated labels.

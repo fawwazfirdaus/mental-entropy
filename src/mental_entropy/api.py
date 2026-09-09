@@ -1,7 +1,7 @@
 """MES (Mental Entropy Score) REST API.
 
 FastAPI service exposing the MES scoring pipeline as HTTP endpoints.
-Designed for integration with the Empath backend (Node.js/Express).
+Standalone local interface for research experiments and scoring demos.
 
 Usage:
     # Install API dependencies
@@ -312,7 +312,7 @@ def create_app() -> FastAPI:
         lifespan=_lifespan,
     )
 
-    # CORS — allow Empath frontend and localhost
+    # CORS origins are configurable for local clients.
     cors_origins = os.environ.get("MES_CORS_ORIGINS", "*").split(",")
     app.add_middleware(
         CORSMiddleware,
