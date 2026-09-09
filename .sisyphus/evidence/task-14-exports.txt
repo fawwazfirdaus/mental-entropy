@@ -1,0 +1,6 @@
+Command:
+uv run python -c "from mental_entropy.scoring import score_ce, score_se, score_ne, score_cle, mes_score; from mental_entropy import score_ce as top_score_ce, mes_score as top_mes_score; print('scoring imports: OK'); print('top-level scoring imports: OK')"
+
+Output:
+scoring imports: OK
+top-level scoring imports: OK

@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["python312"]
+
+[phases.install]
+cmds = ["pip install uv && uv sync --extra api --extra models --no-dev"]
+
+[phases.build]
+cmds = [
+  "PYTHONPATH=src .venv/bin/python -m spacy download en_core_web_sm",
+  "PYTHONPATH=src .venv/bin/python -c 'from mental_entropy.embedding.model import _get_model, _get_tokenizer; _get_model(); _get_tokenizer(); print(\"Model cached\")'",
+]
+
+[start]
+cmd = "PYTHONPATH=src .venv/bin/python -m mental_entropy.api"

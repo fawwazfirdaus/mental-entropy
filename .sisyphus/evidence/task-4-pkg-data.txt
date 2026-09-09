@@ -1,0 +1,7 @@
+Command: uv run python -c "import importlib.resources as resources; ref = resources.files('mental_entropy.models'); print(f'Models path: {ref}'); print('PKG_DATA_OK')"
+Models path: /Users/fawwaz/Developer/mental-entropy/src/mental_entropy/models
+PKG_DATA_OK
+
+Hatchling compatibility check:
+- pyproject.toml [tool.hatch.build.targets.wheel] uses packages = ["src/mental_entropy"].
+- This package root includes mental_entropy.models, so importlib.resources discovery is compatible.

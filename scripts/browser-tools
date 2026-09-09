@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+global_bin="${HOME}/.codex/scripts/browser-tools"
+
+if [[ -x "$global_bin" ]]; then
+  exec "$global_bin" "$@"
+fi
+
+echo "Error: global browser-tools binary not found at $global_bin" >&2
+echo "Install it with Bun from browser-tools.ts in ~/.codex/scripts." >&2
+exit 1

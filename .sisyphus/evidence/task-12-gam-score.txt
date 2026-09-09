@@ -1,0 +1,4 @@
+BLOCKED: Model artifact 'gam_ce.joblib' not found in mental_entropy.models. Install scoring extras: pip install mental-entropy[scoring]
+
+After creating artifacts in `src/mental_entropy/models`:
+CE=0.000, GAM_SCORE_OK

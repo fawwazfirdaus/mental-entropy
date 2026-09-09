@@ -1,0 +1,8 @@
+PASS: decision trace contains exact metrics
+recommendation=baseline
+val_baseline_mean_mae=0.14540256519313866
+val_swap_mean_mae=0.14567988541505453
+val_baseline_mean_spearman=0.35028827396002205
+val_swap_mean_spearman=0.32235607043219855
+test_baseline_mean_mae=0.1402506781471037
+test_swap_mean_mae=0.13073727947149488

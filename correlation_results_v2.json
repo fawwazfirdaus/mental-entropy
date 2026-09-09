@@ -1,0 +1,392 @@
+{
+  "correlations": {
+    "bc_belief_sentence_count": 0.09511395582286532,
+    "bc_belief_sentence_rate": -0.04488356077390521,
+    "bc_conflict_pair_count": 0.05630582441606052,
+    "bc_conflict_rate": 0.04058896202168962,
+    "bc_conflict_span_max": 0.05626065762073255,
+    "bc_conflict_span_mean": 0.038503471281495845,
+    "bc_integrated_count": 0.07860199112681404,
+    "bc_integration_rate": -0.013416004007894824,
+    "bc_max_conflict_sim": 0.02931886526905676,
+    "bc_mean_conflict_sim": 0.03263470143736672,
+    "bc_unresolved_count": 0.038330419131941164,
+    "bc_unresolved_rate": 0.04073095422636981,
+    "ce_adj_max": -0.1832950456349962,
+    "ce_adj_mean": -0.2907377700995644,
+    "ce_adj_median": -0.2869844649372459,
+    "ce_adj_min": -0.3238971347927974,
+    "ce_adj_p10": -0.302133997184753,
+    "ce_adj_p25": -0.3062989956350747,
+    "ce_adj_p75": -0.2736255556563296,
+    "ce_adj_p90": -0.25246762548974727,
+    "ce_adj_std": -0.0265652194231083,
+    "ce_break_count": 0.14349404694754775,
+    "ce_break_rate": 0.08682584006148453,
+    "ce_drop_mean": 0.03701995613740823,
+    "ce_drop_min": -0.03520978834049128,
+    "ce_drop_std": 0.005228545812709923,
+    "ce_inter_block_break_count": 0.013799476150688684,
+    "ce_inter_block_break_rate": 0.02269350195099571,
+    "ce_intra_block_break_count": 0.15633586905885907,
+    "ce_intra_block_break_rate": 0.08010399434517361,
+    "ce_longest_coherent_run": -0.03764075299425213,
+    "ce_low_mass": 0.13956461405583806,
+    "ce_low_mass_sum": 0.1700269155331549,
+    "ce_n_adj": 0.05687776716994684,
+    "ce_n_blocks": -0.07828354352753947,
+    "ce_n_sentences": 0.05687776716994684,
+    "ce_sharp_drop_count": 0.023900404189681965,
+    "ce_sharp_drop_rate": -0.014533420421087902,
+    "ce_skip_break_count": 0.11222797911066536,
+    "ce_skip_mean": -0.22454791573140037,
+    "ce_skip_min": -0.25198322668868534,
+    "cle_adj_low_frac": 0.08468595530009752,
+    "cle_adj_sim_cv": -0.009555279222182836,
+    "cle_adj_sim_range": 0.06084089848891396,
+    "cle_adj_sim_std": -0.0265652194231083,
+    "cle_fragment_rate": 0.22128365544355885,
+    "cle_hedge_rate": 0.057192439426270725,
+    "cle_length_cv": 0.1182286596145809,
+    "cle_punctuation_noise": 0.020435084758032667,
+    "cle_repetition_score": -0.11083819822836391,
+    "cle_restart_rate": 0.03431177286750594,
+    "cle_resume_rate": -0.008938131518550267,
+    "cle_semantic_break_rate": 0.08417145139993863,
+    "cle_semantic_isolated_rate": 0.10336199505008815,
+    "cle_zigzag_rate": -0.025362910390310918,
+    "ne_arc_linearity": -0.14906375587142595,
+    "ne_connectors_rate": -0.05345410317580754,
+    "ne_consolidation_delta": 0.011483541972448243,
+    "ne_end_to_centroid": -0.31191806940670397,
+    "ne_fragment_sentence_rate": 0.2072191802132074,
+    "ne_last_sentence_reflective": 0.0,
+    "ne_punct_break_rate": 0.07783258770731187,
+    "ne_reflection_rate": -0.05599345580554302,
+    "ne_semantic_wander": -0.18864498008634983,
+    "ne_start_end_sim": -0.33510753791436115,
+    "ne_start_to_centroid": -0.3147330603227628,
+    "ne_temporal_jump_rate": -0.04600106046998568,
+    "ne_temporal_markers_rate": -0.17320947058301797,
+    "se_cluster_entropy": 0.16459357241083034,
+    "se_dominant_cluster_frac": -0.3363394204097616,
+    "se_inter_mean": -0.3039376226508164,
+    "se_intra_mean": -0.3106139946411317,
+    "se_n_clusters": 0.10451854557807663,
+    "se_switch_count": 0.12783113651072528,
+    "se_switch_mean_jump": 0.1433391141940845,
+    "se_switch_rate": 0.15421108066151956,
+    "se_switch_weighted": 0.1540639098653467
+  },
+  "sorted_by_abs": [
+    [
+      "se_dominant_cluster_frac",
+      -0.3363394204097616
+    ],
+    [
+      "ne_start_end_sim",
+      -0.33510753791436115
+    ],
+    [
+      "ce_adj_min",
+      -0.3238971347927974
+    ],
+    [
+      "ne_start_to_centroid",
+      -0.3147330603227628
+    ],
+    [
+      "ne_end_to_centroid",
+      -0.31191806940670397
+    ],
+    [
+      "se_intra_mean",
+      -0.3106139946411317
+    ],
+    [
+      "ce_adj_p25",
+      -0.3062989956350747
+    ],
+    [
+      "se_inter_mean",
+      -0.3039376226508164
+    ],
+    [
+      "ce_adj_p10",
+      -0.302133997184753
+    ],
+    [
+      "ce_adj_mean",
+      -0.2907377700995644
+    ],
+    [
+      "ce_adj_median",
+      -0.2869844649372459
+    ],
+    [
+      "ce_adj_p75",
+      -0.2736255556563296
+    ],
+    [
+      "ce_adj_p90",
+      -0.25246762548974727
+    ],
+    [
+      "ce_skip_min",
+      -0.25198322668868534
+    ],
+    [
+      "ce_skip_mean",
+      -0.22454791573140037
+    ],
+    [
+      "cle_fragment_rate",
+      0.22128365544355885
+    ],
+    [
+      "ne_fragment_sentence_rate",
+      0.2072191802132074
+    ],
+    [
+      "ne_semantic_wander",
+      -0.18864498008634983
+    ],
+    [
+      "ce_adj_max",
+      -0.1832950456349962
+    ],
+    [
+      "ne_temporal_markers_rate",
+      -0.17320947058301797
+    ],
+    [
+      "ce_low_mass_sum",
+      0.1700269155331549
+    ],
+    [
+      "se_cluster_entropy",
+      0.16459357241083034
+    ],
+    [
+      "ce_intra_block_break_count",
+      0.15633586905885907
+    ],
+    [
+      "se_switch_rate",
+      0.15421108066151956
+    ],
+    [
+      "se_switch_weighted",
+      0.1540639098653467
+    ],
+    [
+      "ne_arc_linearity",
+      -0.14906375587142595
+    ],
+    [
+      "ce_break_count",
+      0.14349404694754775
+    ],
+    [
+      "se_switch_mean_jump",
+      0.1433391141940845
+    ],
+    [
+      "ce_low_mass",
+      0.13956461405583806
+    ],
+    [
+      "se_switch_count",
+      0.12783113651072528
+    ],
+    [
+      "cle_length_cv",
+      0.1182286596145809
+    ],
+    [
+      "ce_skip_break_count",
+      0.11222797911066536
+    ],
+    [
+      "cle_repetition_score",
+      -0.11083819822836391
+    ],
+    [
+      "se_n_clusters",
+      0.10451854557807663
+    ],
+    [
+      "cle_semantic_isolated_rate",
+      0.10336199505008815
+    ],
+    [
+      "bc_belief_sentence_count",
+      0.09511395582286532
+    ],
+    [
+      "ce_break_rate",
+      0.08682584006148453
+    ],
+    [
+      "cle_adj_low_frac",
+      0.08468595530009752
+    ],
+    [
+      "cle_semantic_break_rate",
+      0.08417145139993863
+    ],
+    [
+      "ce_intra_block_break_rate",
+      0.08010399434517361
+    ],
+    [
+      "bc_integrated_count",
+      0.07860199112681404
+    ],
+    [
+      "ce_n_blocks",
+      -0.07828354352753947
+    ],
+    [
+      "ne_punct_break_rate",
+      0.07783258770731187
+    ],
+    [
+      "cle_adj_sim_range",
+      0.06084089848891396
+    ],
+    [
+      "cle_hedge_rate",
+      0.057192439426270725
+    ],
+    [
+      "ce_n_adj",
+      0.05687776716994684
+    ],
+    [
+      "ce_n_sentences",
+      0.05687776716994684
+    ],
+    [
+      "bc_conflict_pair_count",
+      0.05630582441606052
+    ],
+    [
+      "bc_conflict_span_max",
+      0.05626065762073255
+    ],
+    [
+      "ne_reflection_rate",
+      -0.05599345580554302
+    ],
+    [
+      "ne_connectors_rate",
+      -0.05345410317580754
+    ],
+    [
+      "ne_temporal_jump_rate",
+      -0.04600106046998568
+    ],
+    [
+      "bc_belief_sentence_rate",
+      -0.04488356077390521
+    ],
+    [
+      "bc_unresolved_rate",
+      0.04073095422636981
+    ],
+    [
+      "bc_conflict_rate",
+      0.04058896202168962
+    ],
+    [
+      "bc_conflict_span_mean",
+      0.038503471281495845
+    ],
+    [
+      "bc_unresolved_count",
+      0.038330419131941164
+    ],
+    [
+      "ce_longest_coherent_run",
+      -0.03764075299425213
+    ],
+    [
+      "ce_drop_mean",
+      0.03701995613740823
+    ],
+    [
+      "ce_drop_min",
+      -0.03520978834049128
+    ],
+    [
+      "cle_restart_rate",
+      0.03431177286750594
+    ],
+    [
+      "bc_mean_conflict_sim",
+      0.03263470143736672
+    ],
+    [
+      "bc_max_conflict_sim",
+      0.02931886526905676
+    ],
+    [
+      "ce_adj_std",
+      -0.0265652194231083
+    ],
+    [
+      "cle_adj_sim_std",
+      -0.0265652194231083
+    ],
+    [
+      "cle_zigzag_rate",
+      -0.025362910390310918
+    ],
+    [
+      "ce_sharp_drop_count",
+      0.023900404189681965
+    ],
+    [
+      "ce_inter_block_break_rate",
+      0.02269350195099571
+    ],
+    [
+      "cle_punctuation_noise",
+      0.020435084758032667
+    ],
+    [
+      "ce_sharp_drop_rate",
+      -0.014533420421087902
+    ],
+    [
+      "ce_inter_block_break_count",
+      0.013799476150688684
+    ],
+    [
+      "bc_integration_rate",
+      -0.013416004007894824
+    ],
+    [
+      "ne_consolidation_delta",
+      0.011483541972448243
+    ],
+    [
+      "cle_adj_sim_cv",
+      -0.009555279222182836
+    ],
+    [
+      "cle_resume_rate",
+      -0.008938131518550267
+    ],
+    [
+      "ce_drop_std",
+      0.005228545812709923
+    ],
+    [
+      "ne_last_sentence_reflective",
+      0.0
+    ]
+  ],
+  "n_samples": 245
+}

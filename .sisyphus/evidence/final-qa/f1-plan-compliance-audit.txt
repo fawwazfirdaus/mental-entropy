@@ -1,0 +1,14 @@
+Task: F1 Plan Compliance Audit (Oracle)
+Date: 2026-02-17
+Session: ses_39253b5beffeYuA4n3mX8KZfMR
+
+Initial audit found blocker:
+- Definition-of-Done command chain required `uv sync --extra scoring` then `uv run pytest tests/ -v`, but pytest was not included in scoring extras.
+
+Remediation applied:
+- Added `pytest>=8.0.0` to `[project.optional-dependencies].scoring` in `pyproject.toml`.
+- Re-ran `uv sync --extra scoring` and `uv run pytest tests/ -v` successfully.
+
+Final oracle verdict:
+- Must Have [13/13] | Must NOT Have [11/11] | Tasks [20/20] | VERDICT: APPROVE
+- Findings: No blockers.

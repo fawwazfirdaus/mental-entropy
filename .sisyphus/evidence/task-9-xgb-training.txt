@@ -1,0 +1,4 @@
+Rows: 938
+SE MAE: 0.1268
+CLE MAE: 0.0999
+PASS: Production XGB models trained

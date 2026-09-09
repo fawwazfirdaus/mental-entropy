@@ -1,0 +1,11 @@
+Reproduction checklist integrity: PASS
+- .sisyphus/plans/model-family-swap-ablation-protocol.md
+- artifacts/ablation/reports/val_baseline.json
+- artifacts/ablation/reports/val_swap.json
+- artifacts/ablation/reports/test_baseline.json
+- artifacts/ablation/reports/test_swap.json
+- artifacts/ablation/reports/report_card_baseline_vs_swap.md
+- artifacts/ablation/reports/decision.json
+- artifacts/ablation/reports/handoff_ablation.md
+- .sisyphus/evidence/ablation-t14-pytest.txt
+- .sisyphus/evidence/ablation-t14-smoke.txt

@@ -1,0 +1,1 @@
+PASS: 938 rows validated - all labels complete, no contamination, all have text

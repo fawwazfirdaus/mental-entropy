@@ -1,0 +1,97 @@
+Task 13 QA Evidence - XGBoost Scoring Functions
+
+Date: 2026-02-17
+
+1) Import smoke check
+Command:
+uv run python -c "from mental_entropy.scoring.xgb_scorers import score_se, score_cle, score_se_from_result, score_cle_from_result; print('IMPORT_OK')"
+
+Output:
+IMPORT_OK
+
+2) Functional smoke check (patched dependencies to avoid model-artifact dependency)
+Command:
+uv run python - <<'PY'
+import sys
+import types
+
+import numpy as np
+
+from mental_entropy.embedding.types import EmbeddingResult
+from mental_entropy.features.cle import CLE_FEATURE_KEYS
+from mental_entropy.features.se import SE_FEATURE_KEYS
+import mental_entropy.scoring.xgb_scorers as xs
+
+calls = {"explainer": 0}
+
+
+class FakeBooster:
+    def __init__(self, name: str) -> None:
+        self.name = name
+
+    def predict(self, matrix: object) -> np.ndarray:
+        if self.name == "xgb_se":
+            return np.array([1.25], dtype=np.float32)
+        return np.array([-0.2], dtype=np.float32)
+
+
+class FakeDMatrix:
+    def __init__(self, data: np.ndarray, feature_names: list[str] | None = None) -> None:
+        self.data = data
+        self.feature_names = feature_names
+
+
+class FakeExplainer:
+    def __init__(self, model: FakeBooster) -> None:
+        calls["explainer"] += 1
+        self.model = model
+
+    def shap_values(self, row: np.ndarray) -> np.ndarray:
+        return np.array([[float(i) for i in range(row.shape[1])]], dtype=np.float32)
+
+
+sys.modules["xgboost"] = types.SimpleNamespace(DMatrix=FakeDMatrix)
+sys.modules["shap"] = types.SimpleNamespace(TreeExplainer=FakeExplainer)
+
+xs._TREE_EXPLAINER_CACHE.clear()
+xs._load_model = lambda name, model_type: FakeBooster(name)
+
+se_features = {key: 0.5 for key in SE_FEATURE_KEYS}
+se_features["se_n_clusters"] = 3
+
+cle_features = {key: 0.1 for key in CLE_FEATURE_KEYS}
+
+se_result_1 = xs.score_se(se_features)
+se_result_2 = xs.score_se(se_features)
+cle_result = xs.score_cle(cle_features)
+
+assert se_result_1.score == 1.0
+assert se_result_2.score == 1.0
+assert cle_result.score == 0.0
+assert set(se_result_1.feature_contributions.keys()) == SE_FEATURE_KEYS
+assert set(cle_result.feature_contributions.keys()) == CLE_FEATURE_KEYS
+assert calls["explainer"] == 2
+
+xs.se_features_from_result = lambda result: se_features
+xs.cle_features_from_result = lambda result: cle_features
+
+dummy = EmbeddingResult(sentences=[], doc_embedding=None)
+assert xs.score_se_from_result(dummy).score == 1.0
+assert xs.score_cle_from_result(dummy).score == 0.0
+
+print("TASK13_XGB_OK")
+PY
+
+Output:
+TASK13_XGB_OK
+
+Notes:
+- This verifies feature validation path, DMatrix prediction call path, score clamping, TreeExplainer caching, contribution keysets, and `_from_result` wrappers.
+- Real artifact scoring with `_load_model('xgb_se', 'json')` / `_load_model('xgb_cle', 'json')` still depends on JSON model artifacts being present in `src/mental_entropy/models`.
+
+3) Real artifact smoke check (after generating models under `src/mental_entropy/models`)
+Command:
+uv run python -c "from mental_entropy.features import SE_FEATURE_KEYS; from mental_entropy.scoring.xgb_scorers import score_se; features={k:0.5 for k in SE_FEATURE_KEYS}; features['se_n_clusters']=3; features['se_switch_count']=2; r=score_se(features); assert 0.0<=r.score<=1.0; assert set(r.feature_contributions.keys())==SE_FEATURE_KEYS; print(f'SE={r.score:.3f}, XGB_SCORE_OK')"
+
+Output:
+SE=0.313, XGB_SCORE_OK

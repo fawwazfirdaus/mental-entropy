@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+global_script="${HOME}/.codex/scripts/committer"
+
+if [[ -x "$global_script" ]]; then
+  exec "$global_script" "$@"
+fi
+
+echo "Error: global committer script not found at $global_script" >&2
+echo "Install it from this repo with:" >&2
+echo "  mkdir -p ~/.codex/scripts && cp scripts/committer ~/.codex/scripts/committer && chmod +x ~/.codex/scripts/committer" >&2
+exit 1

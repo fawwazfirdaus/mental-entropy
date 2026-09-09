@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+global_script="${HOME}/.codex/scripts/sync-agent-scripts"
+
+if [[ -x "$global_script" ]]; then
+  exec "$global_script" "$@"
+fi
+
+echo "Error: global sync script not found at $global_script" >&2
+echo "Install it in ~/.codex/scripts/sync-agent-scripts first." >&2
+exit 1

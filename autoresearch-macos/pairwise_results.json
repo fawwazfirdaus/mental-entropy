@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-03-24T10:00:00",
+  "n_entries": 3166,
+  "n_human": 1921,
+  "n_synth": 1245,
+  "baseline_human_corr": 0.6753,
+  "baseline_cv_corr": 0.8067,
+  "approach_a_ranksvm": {
+    "best_config": "alpha=10.0, diff=1.5",
+    "best_human_corr": 0.6646,
+    "best_cv_corr": 0.7765,
+    "all_configs": [
+      {
+        "alpha": 0.01,
+        "diff": 1.0,
+        "human": 0.5775,
+        "cv": 0.6781
+      },
+      {
+        "alpha": 0.01,
+        "diff": 1.5,
+        "human": 0.5766,
+        "cv": 0.6856
+      },
+      {
+        "alpha": 0.01,
+        "diff": 2.0,
+        "human": 0.5832,
+        "cv": 0.6935
+      },
+      {
+        "alpha": 0.1,
+        "diff": 1.0,
+        "human": 0.6275,
+        "cv": 0.7286
+      },
+      {
+        "alpha": 0.1,
+        "diff": 1.5,
+        "human": 0.6267,
+        "cv": 0.7341
+      },
+      {
+        "alpha": 0.1,
+        "diff": 2.0,
+        "human": 0.6324,
+        "cv": 0.7406
+      },
+      {
+        "alpha": 1.0,
+        "diff": 1.0,
+        "human": 0.658,
+        "cv": 0.7608
+      },
+      {
+        "alpha": 1.0,
+        "diff": 1.5,
+        "human": 0.6588,
+        "cv": 0.7645
+      },
+      {
+        "alpha": 1.0,
+        "diff": 2.0,
+        "human": 0.662,
+        "cv": 0.7688
+      },
+      {
+        "alpha": 10.0,
+        "diff": 1.0,
+        "human": 0.6631,
+        "cv": 0.7745
+      },
+      {
+        "alpha": 10.0,
+        "diff": 1.5,
+        "human": 0.6646,
+        "cv": 0.7765
+      },
+      {
+        "alpha": 10.0,
+        "diff": 2.0,
+        "human": 0.6645,
+        "cv": 0.7781
+      }
+    ]
+  },
+  "conclusion": "Pairwise ranking (RankSVM) achieves max human_corr=0.665, below baseline Ridge (0.675). Pairwise training loses absolute scale information that direct regression preserves. The existing consensus labels already encode sufficient ordering signal."
+}

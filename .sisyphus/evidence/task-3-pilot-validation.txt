@@ -1,0 +1,3 @@
+Total rows: 50
+Valid rows: 50
+PASS: All labels valid anchors and >=45 valid rows

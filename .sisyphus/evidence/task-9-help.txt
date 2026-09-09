@@ -1,0 +1,11 @@
+usage: validate_labels.py [-h] --labeled-input LABELED_INPUT --scored-input
+                          SCORED_INPUT
+
+Compare LLM labels against heuristic entropy_analysis subscores.
+
+options:
+  -h, --help            show this help message and exit
+  --labeled-input LABELED_INPUT
+                        JSONL containing LLM labels.
+  --scored-input SCORED_INPUT
+                        JSONL containing entropy_analysis scores.

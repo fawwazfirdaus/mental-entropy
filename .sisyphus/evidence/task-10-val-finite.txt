@@ -1,0 +1,1 @@
+PASS: All 43 val entries produce valid finite scores

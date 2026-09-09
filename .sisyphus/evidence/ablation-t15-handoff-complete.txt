@@ -1,0 +1,9 @@
+Handoff completeness: PASS
+- .sisyphus/plans/model-family-swap-ablation-protocol.md
+- artifacts/ablation/reports/val_baseline.json
+- artifacts/ablation/reports/val_swap.json
+- artifacts/ablation/reports/test_baseline.json
+- artifacts/ablation/reports/test_swap.json
+- artifacts/ablation/reports/decision.json
+- Recommended profile:
+- Reproduction Commands

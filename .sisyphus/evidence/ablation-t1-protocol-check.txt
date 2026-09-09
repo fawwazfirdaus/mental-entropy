@@ -1,0 +1,1 @@
+PASS: protocol contains required sections

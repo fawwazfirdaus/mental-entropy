@@ -1,0 +1,2 @@
+Rows checked: 50
+PASS: No entropy_analysis contamination

@@ -1,0 +1,3 @@
+CE: n=938, R2=-0.2049, MAE=0.1452
+NE: n=938, R2=-0.0289, MAE=0.1533
+PASS: Production GAM models trained

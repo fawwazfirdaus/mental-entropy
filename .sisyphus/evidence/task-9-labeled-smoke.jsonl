@@ -1,0 +1,3 @@
+{"id": "a", "labels": {"ce": 0.5, "se": 0.25, "ne": 0.75, "cle": 0.5}}
+{"journal_id": "b", "ce": 0.25, "se": 0.5, "ne": 0.5, "cle": 0.25}
+{"id": "missing_score", "labels": {"ce": 0.0, "se": 0.0, "ne": 0.0, "cle": 0.0}}

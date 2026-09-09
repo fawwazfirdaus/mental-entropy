@@ -1,0 +1,4 @@
+score=72
+raw=0.715
+ce=0.8 se=0.3 ne=0.6 cle=0.9
+PASS known-case

@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "n_anchors": 5,
+  "description": "Golden benchmark set for MES evaluation. Anchors represent clear entropy levels with high inter-rater agreement.",
+  "usage": "After any model change, verify model.predict(anchor[i]) < model.predict(anchor[j]) for all i < j.",
+  "anchors": [
+    {
+      "target": "very_low",
+      "percentile": 0,
+      "description": "Calm, organized, single-topic, reflective",
+      "idx": 3111,
+      "overall_entropy": 2.0,
+      "label_std": 0.0,
+      "source": "human",
+      "text_length": 798,
+      "journal_preview": "I (27F) matched with this guy on Hinge last week. Seemed decent enough, mid-30s, clean job, not a shirtless mirror selfie in sight. Conversation was a little cringe but manageable. Until tonight.\n\nWe’...",
+      "n_candidates": 199
+    },
+    {
+      "target": "low",
+      "percentile": 25,
+      "description": "Mostly coherent, minor tangents",
+      "idx": 3076,
+      "overall_entropy": 3.0,
+      "label_std": 0.0,
+      "source": "human",
+      "text_length": 800,
+      "journal_preview": "It’s been a heavy month. My dad, a true, loving, hard-working role model of mine came down with Coronavirus roughly a month ago from a co-worker. Ever since the diagnosis, I had to relocate to a relat...",
+      "n_candidates": 834
+    },
+    {
+      "target": "medium",
+      "percentile": 50,
+      "description": "Mixed coherence and fragmentation",
+      "idx": 934,
+      "overall_entropy": 4.0,
+      "label_std": 0.0,
+      "source": "human",
+      "text_length": 809,
+      "journal_preview": "It has been 39 days seems longer but an accomplishment still there are times during the day when I would love a smoke but as always I remember the poison in cigarettes and what it does to my body I di...",
+      "n_candidates": 1468
+    },
+    {
+      "target": "high",
+      "percentile": 75,
+      "description": "Noticeable topic jumping, hedging",
+      "idx": 909,
+      "overall_entropy": 7.0,
+      "label_std": 0.0,
+      "source": "human",
+      "text_length": 852,
+      "journal_preview": "Alas, I co-exist in world full of mundane understandings. Where, do I plead, ly sanction for an Artists will? When, further do I ask, was it condoned that being an artist was such a sin?\nMy unrequited...",
+      "n_candidates": 389
+    },
+    {
+      "target": "very_high",
+      "percentile": 100,
+      "description": "Severely fragmented, contradictory, scattered",
+      "idx": 1264,
+      "overall_entropy": 8.0,
+      "label_std": 0.0,
+      "source": "human",
+      "text_length": 474,
+      "journal_preview": "I don't know what to say. Say anything. If I say anything, it'll just record exactly what I say, and it'll just the AI to transcribe. So it will say it should do everything fine. Man, I wanted to go t...",
+      "n_candidates": 209
+    }
+  ],
+  "anchor_texts": {
+    "very_low": "I (27F) matched with this guy on Hinge last week. Seemed decent enough, mid-30s, clean job, not a shirtless mirror selfie in sight. Conversation was a little cringe but manageable. Until tonight.\n\nWe’re talking about childhood pets. I say I had a golden retriever named Max. He goes, “Aww, I love goldens. Such good boys. I’m kind of like one, loyal and full of energy.”\n\nI say “Haha good to know.”\n\nThen this man… sends a VOICE MESSAGE.\n\nSo I open it.\n\nHe barks.\nLike a dog.\nTWO TIMES.\nRUFF RUFF.\n\nThen follows it up with, “Told you I was a good boy 😉”\n\nI don’t know if I’m just socially broken at this point, but I literally dropped my phone. Just stood there staring into the void while his “ruff ruff” echoed in my soul.\n\nAnyway, I unmatched. And now I need to wash my ears out with holy water.",
+    "low": "It’s been a heavy month. My dad, a true, loving, hard-working role model of mine came down with Coronavirus roughly a month ago from a co-worker. Ever since the diagnosis, I had to relocate to a relative’s house after being tested, and the only contact came over the phone so it was kinda rough. Either way, he fought through it with stride, big props to my mom for being a loving wife and trooper for helping my dad recover. Even as he was in quarantine, he exercised healthily and kept good spirits, I don’t think that I could’ve been as strong as he was.\n\nPlease take care of yourselves and stay safe, remember that someone loves you and wants to see you well. It’s been a rough quarantine period but I promise that this will pass and the best is yet to come! Much love and well wishes, take care!",
+    "medium": "It has been 39 days seems longer but an accomplishment still there are times during the day when I would love a smoke but as always I remember the poison in cigarettes and what it does to my body I dismiss it and put the dragon back to sleep every day is easier do not want to sound too confident but I am quite certain this is my last quit it has to stick.\nWork was good today we got a lot done roads were slick on the way home but I was fine noticed a low tire on right front of my truck so for time being I aired it up will have it looked at when I take it in for inspection. I am also working tomorrow will be off Monday then 4 day on and 5 days off over Christmas. Most all shopping done still need to find gift for Mom she is quite difficult to buy for.\nEnjoy Life and fresh air .. Not one puff ever\nTim",
+    "high": "Alas, I co-exist in world full of mundane understandings. Where, do I plead, ly sanction for an Artists will? When, further do I ask, was it condoned that being an artist was such a sin?\nMy unrequited love plagues my soul existence, lies which he so honestly reproached, I shan't but respond the aesthetic ways which emotions should so willingly reply?\nA crescent arch of my stab-worn heart, all aflame with bird's winged-hauntings.\nA music sheet burnt asunder to portrait the Nocturne you played so clearly by Sound of Silence.\nAnd how, with gratitude of creativity to express the natures of art, do I be renown for such beauty?!\nA psychopath!\nWhat is Art! ... then, I must ask.\nHark! Where do I belong, when no one understands the essence of a soul at it's rawest demand! Forsaken. I-am-forever ... forsaken. Burdened to be ... an artist- psychopath.",
+    "very_high": "I don't know what to say. Say anything. If I say anything, it'll just record exactly what I say, and it'll just the AI to transcribe. So it will say it should do everything fine. Man, I wanted to go to the Yankees game today, and Devin said didn't wanna Devin showed up. Devin showed up and said complaining and cried about how he can only hang out to the girlfriend. And now we're not going to the game. You know what mean? Yeah. It's Sid's girlfriend. That's it. And Fine."
+  }
+}

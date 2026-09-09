@@ -1,0 +1,15 @@
+[project]
+name = "autoresearch"
+version = "0.1.0"
+description = "Autonomous MES weight optimization"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.2.6",
+    "matplotlib>=3.10.8",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.6.0",
+    "xgboost>=2.1.0",
+]
+
+

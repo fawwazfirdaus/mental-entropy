@@ -1,0 +1,21 @@
+{
+  "profile": "baseline",
+  "subscores": {
+    "ce": 0.16438207390437765,
+    "se": 0.38423845171928406,
+    "ne": 0.22936793559363783,
+    "cle": 0.18602541089057922
+  },
+  "mes": {
+    "raw": 0.2168507040103261,
+    "score": 22
+  },
+  "checks": {
+    "profile": "baseline",
+    "ce_in_range": true,
+    "se_in_range": true,
+    "ne_in_range": true,
+    "cle_in_range": true,
+    "mes_in_range": true
+  }
+}

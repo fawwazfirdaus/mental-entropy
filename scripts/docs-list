@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+global_script="${HOME}/.codex/scripts/docs-list"
+
+if [[ -x "$global_script" ]]; then
+  exec "$global_script" "$@"
+fi
+
+echo "Error: global docs-list script not found at $global_script" >&2
+echo "Install it by copying a known-good implementation into ~/.codex/scripts/docs-list and making it executable." >&2
+exit 1

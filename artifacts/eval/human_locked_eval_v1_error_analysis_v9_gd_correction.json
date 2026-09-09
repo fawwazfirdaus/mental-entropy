@@ -1,0 +1,293 @@
+{
+  "eval_set_version": "human_locked_eval_v1",
+  "summary": {
+    "entry_count": 25,
+    "high_labeled_count": 10,
+    "high_false_low_count": 5,
+    "detected_high_count": 8,
+    "low_labeled_count": 11
+  },
+  "group_metrics": {
+    "high_false_lows": {
+      "n": 5,
+      "mean_expected_mes": 88.16,
+      "mean_model_mes": 63.97,
+      "mean_error": -24.19,
+      "mean_abs_error": 24.19
+    },
+    "detected_highs": {
+      "n": 8,
+      "mean_expected_mes": 83.34,
+      "mean_model_mes": 73.29,
+      "mean_error": -10.05,
+      "mean_abs_error": 12.08
+    },
+    "low_labeled": {
+      "n": 11,
+      "mean_expected_mes": 20.71,
+      "mean_model_mes": 35.67,
+      "mean_error": 14.96,
+      "mean_abs_error": 19.06
+    }
+  },
+  "high_false_lows": [
+    {
+      "id": "spectrum_9_10_03",
+      "control_type": "spectrum_9_10",
+      "label_overall_entropy": 9.67,
+      "expected_mes": 96.33,
+      "model_mes": 56.84,
+      "error": -39.49,
+      "abs_error": 39.49,
+      "preview": "I thought people would understand me.   They’re not risk-takers. I’m a risk-taker.   They want people to go through life scared.   You’re competing to get into heaven.   Gaming can make everyone feel like gam  Gaming is ",
+      "selected_features": {
+        "gd_disorder_marker_count_norm": 1.0,
+        "gd_disorder_markers_per_500w": 8.7379,
+        "gd_global_disorder_score": 0.3511,
+        "gd_loop_repetition_rate": 0.0082,
+        "gd_runon_chain_rate": 0.0,
+        "gd_unanchored_question_rate": 0.0984,
+        "gd_corruption_rate": 0.0,
+        "gd_compression_failure_score": 0.0625,
+        "gd_marker_x_global": 0.3511,
+        "gd_density_cap": 0.4369,
+        "gd_marker_or_density": 1.0
+      },
+      "subscores": {
+        "prediction_coherence_subscore": 3.5,
+        "model_complexity_subscore": 3.15,
+        "compression_progress_subscore": 3.55,
+        "belief_integration_subscore": 3.43,
+        "precision_weighting_subscore": 3.4
+      }
+    },
+    {
+      "id": "spectrum_7_8_01",
+      "control_type": "spectrum_7_8",
+      "label_overall_entropy": 8.0,
+      "expected_mes": 77.78,
+      "model_mes": 54.02,
+      "error": -23.76,
+      "abs_error": 23.76,
+      "preview": "I will not argue how my b abies are getting along together most of the time together today. I will never decide both of them. My babies Magic and Millie are coming along. Millie is still a little skittish around me, but ",
+      "selected_features": {
+        "gd_disorder_marker_count_norm": 0.0,
+        "gd_disorder_markers_per_500w": 0.0,
+        "gd_global_disorder_score": 0.061,
+        "gd_loop_repetition_rate": 0.0,
+        "gd_runon_chain_rate": 0.0,
+        "gd_unanchored_question_rate": 0.0,
+        "gd_corruption_rate": 0.0,
+        "gd_compression_failure_score": 0.1,
+        "gd_marker_x_global": 0.0,
+        "gd_density_cap": 0.0,
+        "gd_marker_or_density": 0.0
+      },
+      "subscores": {
+        "prediction_coherence_subscore": 2.91,
+        "model_complexity_subscore": 2.88,
+        "compression_progress_subscore": 2.31,
+        "belief_integration_subscore": 3.75,
+        "precision_weighting_subscore": 2.57
+      }
+    },
+    {
+      "id": "neutral_fragmented_04",
+      "control_type": "neutral_fragmented_positive",
+      "label_overall_entropy": 9.0,
+      "expected_mes": 88.89,
+      "model_mes": 68.07,
+      "error": -20.82,
+      "abs_error": 20.82,
+      "preview": "Try matching up with four simultaneously, Slipperperson! I hate tequila.  And I'm not supposed to add salt to anything. Which drink are you? I don't wear glasses.  Well, not full time, anyhow. Take The Scooby-Doo Test! I",
+      "selected_features": {
+        "gd_disorder_marker_count_norm": 0.375,
+        "gd_disorder_markers_per_500w": 19.7368,
+        "gd_global_disorder_score": 0.3149,
+        "gd_loop_repetition_rate": 0.0833,
+        "gd_runon_chain_rate": 0.0,
+        "gd_unanchored_question_rate": 0.1667,
+        "gd_corruption_rate": 0.0,
+        "gd_compression_failure_score": 0.1,
+        "gd_marker_x_global": 0.1181,
+        "gd_density_cap": 0.9868,
+        "gd_marker_or_density": 0.9868
+      },
+      "subscores": {
+        "prediction_coherence_subscore": 2.99,
+        "model_complexity_subscore": 2.72,
+        "compression_progress_subscore": 2.32,
+        "belief_integration_subscore": 3.09,
+        "precision_weighting_subscore": 3.42
+      }
+    },
+    {
+      "id": "neutral_fragmented_05",
+      "control_type": "neutral_fragmented_positive",
+      "label_overall_entropy": 9.0,
+      "expected_mes": 88.89,
+      "model_mes": 70.12,
+      "error": -18.77,
+      "abs_error": 18.77,
+      "preview": "going home by five minutes? alt=\"I'm the Lamer Trolley!\" border=0> Ding ding! Take that, Chevron. Take the \"What weird obsession are you?\" quiz by Kazzie ! I don't even know what a Lamer Trolley is. I don't care who you ",
+      "selected_features": {
+        "gd_disorder_marker_count_norm": 0.625,
+        "gd_disorder_markers_per_500w": 36.7647,
+        "gd_global_disorder_score": 0.447,
+        "gd_loop_repetition_rate": 0.0,
+        "gd_runon_chain_rate": 0.0,
+        "gd_unanchored_question_rate": 0.2,
+        "gd_corruption_rate": 0.3,
+        "gd_compression_failure_score": 0.1,
+        "gd_marker_x_global": 0.2794,
+        "gd_density_cap": 1.0,
+        "gd_marker_or_density": 1.0
+      },
+      "subscores": {
+        "prediction_coherence_subscore": 3.0,
+        "model_complexity_subscore": 2.92,
+        "compression_progress_subscore": 2.31,
+        "belief_integration_subscore": 3.37,
+        "precision_weighting_subscore": 3.17
+      }
+    },
+    {
+      "id": "spectrum_9_10_02",
+      "control_type": "spectrum_9_10",
+      "label_overall_entropy": 9.0,
+      "expected_mes": 88.89,
+      "model_mes": 70.79,
+      "error": -18.1,
+      "abs_error": 18.1,
+      "preview": "They've asked for the no communication. It's really hard to get it to, but it's really hard to see if, like, and all the time. And two, with our history, he knows I didn't like that. And there's history of me. Think he's",
+      "selected_features": {
+        "gd_disorder_marker_count_norm": 1.0,
+        "gd_disorder_markers_per_500w": 11.396,
+        "gd_global_disorder_score": 0.3604,
+        "gd_loop_repetition_rate": 0.0465,
+        "gd_runon_chain_rate": 0.0,
+        "gd_unanchored_question_rate": 0.1163,
+        "gd_corruption_rate": 0.0,
+        "gd_compression_failure_score": 0.0,
+        "gd_marker_x_global": 0.3604,
+        "gd_density_cap": 0.5698,
+        "gd_marker_or_density": 1.0
+      },
+      "subscores": {
+        "prediction_coherence_subscore": 2.74,
+        "model_complexity_subscore": 2.38,
+        "compression_progress_subscore": 2.74,
+        "belief_integration_subscore": 3.24,
+        "precision_weighting_subscore": 2.69
+      }
+    }
+  ],
+  "feature_deltas": [
+    {
+      "name": "gd_disorder_markers_per_500w",
+      "false_low_mean": 15.3271,
+      "detected_high_mean": 16.7733,
+      "delta_false_low_minus_detected": -1.4462
+    },
+    {
+      "name": "gd_compression_failure_score",
+      "false_low_mean": 0.0725,
+      "detected_high_mean": 0.1813,
+      "delta_false_low_minus_detected": -0.1088
+    },
+    {
+      "name": "gd_global_disorder_score",
+      "false_low_mean": 0.3069,
+      "detected_high_mean": 0.3835,
+      "delta_false_low_minus_detected": -0.0766
+    },
+    {
+      "name": "gd_marker_or_density",
+      "false_low_mean": 0.7974,
+      "detected_high_mean": 0.7443,
+      "delta_false_low_minus_detected": 0.0531
+    },
+    {
+      "name": "gd_disorder_marker_count_norm",
+      "false_low_mean": 0.6,
+      "detected_high_mean": 0.5625,
+      "delta_false_low_minus_detected": 0.0375
+    },
+    {
+      "name": "gd_density_cap",
+      "false_low_mean": 0.5987,
+      "detected_high_mean": 0.6346,
+      "delta_false_low_minus_detected": -0.0359
+    },
+    {
+      "name": "gd_unanchored_question_rate",
+      "false_low_mean": 0.1163,
+      "detected_high_mean": 0.0843,
+      "delta_false_low_minus_detected": 0.032
+    },
+    {
+      "name": "gd_corruption_rate",
+      "false_low_mean": 0.06,
+      "detected_high_mean": 0.0375,
+      "delta_false_low_minus_detected": 0.0225
+    },
+    {
+      "name": "gd_runon_chain_rate",
+      "false_low_mean": 0.0,
+      "detected_high_mean": 0.0169,
+      "delta_false_low_minus_detected": -0.0169
+    },
+    {
+      "name": "gd_marker_x_global",
+      "false_low_mean": 0.2218,
+      "detected_high_mean": 0.2366,
+      "delta_false_low_minus_detected": -0.0148
+    },
+    {
+      "name": "gd_loop_repetition_rate",
+      "false_low_mean": 0.0276,
+      "detected_high_mean": 0.0352,
+      "delta_false_low_minus_detected": -0.0076
+    }
+  ],
+  "subscore_deltas": [
+    {
+      "name": "precision_weighting_subscore",
+      "false_low_mean": 3.05,
+      "detected_high_mean": 2.7738,
+      "delta_false_low_minus_detected": 0.2762
+    },
+    {
+      "name": "belief_integration_subscore",
+      "false_low_mean": 3.376,
+      "detected_high_mean": 3.135,
+      "delta_false_low_minus_detected": 0.241
+    },
+    {
+      "name": "compression_progress_subscore",
+      "false_low_mean": 2.646,
+      "detected_high_mean": 2.4188,
+      "delta_false_low_minus_detected": 0.2272
+    },
+    {
+      "name": "prediction_coherence_subscore",
+      "false_low_mean": 3.028,
+      "detected_high_mean": 2.8375,
+      "delta_false_low_minus_detected": 0.1905
+    },
+    {
+      "name": "model_complexity_subscore",
+      "false_low_mean": 2.81,
+      "detected_high_mean": 2.8262,
+      "delta_false_low_minus_detected": -0.0162
+    }
+  ],
+  "hypotheses": [
+    "Prediction-coherence subscores are too generous on some high-entropy rows."
+  ],
+  "next_modeling_checks": [
+    "Add global disorder features for topic resets, dangling referents, abandoned setup, and no-compression endings.",
+    "Calibrate raw predictions with locked-eval MAE and high-band recall, not correlation alone.",
+    "Compare neutral fragmented controls against emotional coherent controls after every retrain."
+  ]
+}

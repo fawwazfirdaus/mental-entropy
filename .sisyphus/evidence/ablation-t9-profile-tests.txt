@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.12, pytest-9.0.2, pluggy-1.6.0 -- /Users/fawwaz/Developer/mental-entropy/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/fawwaz/Developer/mental-entropy
+configfile: pyproject.toml
+collecting ... collected 9 items
+
+tests/scoring/test_ablation_profiles.py::test_validate_profile_accepts_known_profiles PASSED [ 11%]
+tests/scoring/test_ablation_profiles.py::test_validate_profile_rejects_unknown_profile PASSED [ 22%]
+tests/scoring/test_ablation_profiles.py::test_baseline_mapping PASSED    [ 33%]
+tests/scoring/test_ablation_profiles.py::test_swap_mapping PASSED        [ 44%]
+tests/scoring/test_ablation_profiles.py::test_model_type_for_family PASSED [ 55%]
+tests/scoring/test_ablation_utils.py::test_prepare_row_strict_labels_passes_with_labels_only PASSED [ 66%]
+tests/scoring/test_ablation_utils.py::test_prepare_row_strict_labels_rejects_top_level_fallback_keys PASSED [ 77%]
+tests/scoring/test_ablation_utils.py::test_prepare_row_strict_labels_rejects_entropy_analysis PASSED [ 88%]
+tests/scoring/test_ablation_utils.py::test_load_prepared_rows_fails_on_missing_labels PASSED [100%]
+
+============================== 9 passed in 2.03s ===============================

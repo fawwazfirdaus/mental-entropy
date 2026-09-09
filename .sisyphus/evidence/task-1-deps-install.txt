@@ -1,0 +1,49 @@
+Resolved 96 packages in 1.22s
+   Building mental-entropy @ file:///Users/fawwaz/Developer/mental-entropy
+Downloading xgboost (1.8MiB)
+Downloading llvmlite (35.5MiB)
+Downloading numba (2.6MiB)
+Downloading scikit-learn (7.7MiB)
+Downloading pandas (9.4MiB)
+Downloading scipy (19.9MiB)
+ Downloading xgboost
+ Downloading numba
+      Built mental-entropy @ file:///Users/fawwaz/Developer/mental-entropy
+ Downloading scikit-learn
+ Downloading pandas
+ Downloading scipy
+ Downloading llvmlite
+Prepared 17 packages in 4.89s
+Uninstalled 14 packages in 200ms
+Installed 17 packages in 64ms
+ - anyio==4.12.1
+ + cloudpickle==3.1.2
+ - distro==1.9.0
+ - h11==0.16.0
+ - httpcore==1.0.9
+ - httpx==0.28.1
+ - iniconfig==2.3.0
+ - jiter==0.12.0
+ + joblib==1.5.3
+ + llvmlite==0.46.0
+ ~ mental-entropy==0.1.0 (from file:///Users/fawwaz/Developer/mental-entropy)
+ + numba==0.63.1
+ - openai==2.14.0
+ + pandas==3.0.0
+ - pluggy==1.6.0
+ + progressbar2==4.5.0
+ + pygam==0.12.0
+ - pygments==2.19.2
+ - pytest==9.0.2
+ + python-dateutil==2.9.0.post0
+ - python-dotenv==1.2.1
+ + python-utils==3.9.1
+ + scikit-learn==1.8.0
+ + scipy==1.16.3
+ + shap==0.50.0
+ + six==1.17.0
+ + slicer==0.0.8
+ - sniffio==1.3.1
+ + threadpoolctl==3.6.0
+ + xgboost==2.1.4
+ALL_DEPS_OK

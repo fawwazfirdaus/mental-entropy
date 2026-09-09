@@ -1,0 +1,35 @@
+# Git
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Dev/research files (not needed in production)
+autoresearch-macos/
+data/
+tests/
+docs/
+reports/
+logs/
+scripts/
+*.ipynb
+*.jsonl
+*.csv
+*.npy
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Claude
+.claude/
+
+# Misc
+*.md
+!README.md

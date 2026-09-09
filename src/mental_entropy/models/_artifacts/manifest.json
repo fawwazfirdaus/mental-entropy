@@ -1,0 +1,79 @@
+{
+  "architecture": "subscore_embedding_v7",
+  "training_script": "train_v7_fep.py",
+  "timestamp": "2026-03-31T15:10:52.642202+00:00",
+  "n_entries": 4240,
+  "n_human": 2995,
+  "n_synthetic": 1245,
+  "embedding_dim": 1024,
+  "dimension_names": [
+    "prediction_coherence",
+    "model_complexity",
+    "compression_progress",
+    "belief_integration",
+    "precision_weighting"
+  ],
+  "dimension_display": {
+    "prediction_coherence": {
+      "name": "Thought Flow",
+      "description": "How smoothly your thoughts connect"
+    },
+    "model_complexity": {
+      "name": "Focus",
+      "description": "How well you organized around key themes"
+    },
+    "compression_progress": {
+      "name": "Insight",
+      "description": "Whether you moved toward understanding"
+    },
+    "belief_integration": {
+      "name": "Integration",
+      "description": "How well you hold contradictions with awareness"
+    },
+    "precision_weighting": {
+      "name": "Clarity",
+      "description": "How decisively you express yourself"
+    }
+  },
+  "dim_alpha": 0.1,
+  "combiner_alpha": 0.1,
+  "combiner_features": [
+    "bc_belief_sentence_count",
+    "se_intra_mean",
+    "ne_fragment_sentence_rate",
+    "se_dominant_cluster_frac",
+    "ce_adj_median",
+    "bc_conflict_rate",
+    "ce_adj_p25",
+    "bc_unresolved_count",
+    "ce_adj_mean",
+    "bc_conflict_pair_count"
+  ],
+  "metrics": {
+    "direct_hybrid_human_corr": 0.6160563518907703,
+    "direct_hybrid_cv_corr": 0.7466756122456014,
+    "v7_human_corr": 0.6167278014105878,
+    "per_dimension": {
+      "prediction_coherence": {
+        "human_corr": 0.5890217994701165,
+        "cv_corr": 0.7234785472670326
+      },
+      "model_complexity": {
+        "human_corr": 0.5685545979792539,
+        "cv_corr": 0.6915306049158426
+      },
+      "compression_progress": {
+        "human_corr": 0.6104726120539868,
+        "cv_corr": 0.6733050978966395
+      },
+      "belief_integration": {
+        "human_corr": 0.5960878477949226,
+        "cv_corr": 0.6469266985069054
+      },
+      "precision_weighting": {
+        "human_corr": 0.6534883320051035,
+        "cv_corr": 0.7423916440451697
+      }
+    }
+  }
+}

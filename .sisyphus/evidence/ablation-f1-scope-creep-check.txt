@@ -1,0 +1,13 @@
+scope_creep_check
+changed_count=9
+- artifacts/
+- scripts/ablation_train_gam.py
+- scripts/ablation_train_xgb.py
+- scripts/decide_family_swap.py
+- scripts/eval_subscore_models.py
+- src/mental_entropy/scoring/ablation_profiles.py
+- src/mental_entropy/scoring/ablation_utils.py
+- tests/scoring/test_ablation_profiles.py
+- tests/scoring/test_ablation_utils.py
+violations=[]
+pass=True

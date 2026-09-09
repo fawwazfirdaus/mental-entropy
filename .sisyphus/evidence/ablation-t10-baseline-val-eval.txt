@@ -1,0 +1,4 @@
+{
+  "status": "ok",
+  "output": "artifacts/ablation/reports/val_baseline.json"
+}

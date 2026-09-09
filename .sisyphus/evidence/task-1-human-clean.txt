@@ -1,0 +1,5 @@
+Total CSV rows: 247
+Filtered (<30 words): 31
+Deduplicated (exact text): 0
+Final clean rows: 216
+PASS: 216 clean human journal entries

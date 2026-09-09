@@ -1,0 +1,1 @@
+PASS: swap report schema valid

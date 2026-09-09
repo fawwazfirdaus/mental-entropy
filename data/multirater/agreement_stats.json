@@ -1,0 +1,59 @@
+{
+  "n_entries": 4240,
+  "dimensions": {
+    "prediction_coherence": {
+      "mean_abs_deviation": 0.862,
+      "max_deviation": 3.0,
+      "pct_trimmed": 0.4,
+      "trim_count": 18
+    },
+    "model_complexity": {
+      "mean_abs_deviation": 0.842,
+      "max_deviation": 4.0,
+      "pct_trimmed": 2.3,
+      "trim_count": 98
+    },
+    "compression_progress": {
+      "mean_abs_deviation": 0.613,
+      "max_deviation": 4.0,
+      "pct_trimmed": 0.7,
+      "trim_count": 30
+    },
+    "belief_integration": {
+      "mean_abs_deviation": 0.925,
+      "max_deviation": 4.0,
+      "pct_trimmed": 1.6,
+      "trim_count": 67
+    },
+    "precision_weighting": {
+      "mean_abs_deviation": 0.735,
+      "max_deviation": 4.0,
+      "pct_trimmed": 0.3,
+      "trim_count": 12
+    }
+  },
+  "overall_entropy": {
+    "mean_abs_deviation": 1.417,
+    "max_deviation": 6.0,
+    "pct_trimmed": 2.8,
+    "trim_count": 120
+  },
+  "overall_entropy_distribution": {
+    "1-2": 85,
+    "2-3": 600,
+    "3-4": 990,
+    "4-5": 1292,
+    "5-6": 584,
+    "6-7": 309,
+    "7-8": 150,
+    "8-9": 125,
+    "9-10": 105
+  },
+  "overall_entropy_mean": 4.39,
+  "overall_entropy_std": 1.66,
+  "inter_rater_correlations": {
+    "a_vs_b": 0.8702,
+    "a_vs_c": 0.8227,
+    "b_vs_c": 0.8009
+  }
+}

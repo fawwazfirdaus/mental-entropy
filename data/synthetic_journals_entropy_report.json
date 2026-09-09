@@ -1,0 +1,27 @@
+{
+  "input_files": [
+    "data/synthetic_journals_400_legacy.jsonl",
+    "data/synthetic_journals_400_v3_no_emdash.jsonl"
+  ],
+  "n_entries_scored": 809,
+  "quantile_cutoffs": {
+    "q1": 0.4449110089580387,
+    "q2": 0.5527758132956152
+  },
+  "bin_counts": {
+    "low": 270,
+    "high": 270,
+    "medium": 269
+  },
+  "balanced_counts": {
+    "low": 269,
+    "medium": 269,
+    "high": 269,
+    "total": 807
+  },
+  "outputs": {
+    "scored": "data/synthetic_journals_800_scored.jsonl",
+    "balanced": "data/synthetic_journals_800_balanced.jsonl",
+    "report": "data/synthetic_journals_entropy_report.json"
+  }
+}
