@@ -1,8 +1,10 @@
-# Mental Entropy: NLP for Narrative Coherence
+# Mental Entropy: Predicting Cognitive Disorganization from Journal Text
 
-An experimental NLP pipeline for studying coherence, topic fragmentation, and narrative organization in journal text. It combines transformer embeddings, interpretable linguistic features, and supervised regression into a 0–100 research score.
+An experimental NLP/ML pipeline that uses journal text to estimate how scattered, tangled, or disorganized someone’s thinking is. Higher scores indicate greater disorganization; lower scores indicate clearer, more organized thinking.
 
-The central question: **can learned representations capture discourse organization while retaining useful, inspectable intermediate predictions?** “Mental entropy” is the project's rubric-defined target, not a validated measure of mental health or information-theoretic entropy.
+It combines transformer embeddings, interpretable linguistic features, and supervised regression into a 0–100 research score.
+
+The central question: **can learned representations predict cognitive disorganization from journal text?** “Mental entropy” is the project's rubric-defined target, not a validated measure of mental health or information-theoretic entropy.
 
 ## Methods
 
