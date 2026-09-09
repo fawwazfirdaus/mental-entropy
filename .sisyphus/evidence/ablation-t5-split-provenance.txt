@@ -1,5 +1,0 @@
-Split provenance check (canonical -> prepared features):
-- train: canonical_rows=938 prepared_rows=938 same_len=True same_order=True same_set=True pass=True
-- val: canonical_rows=43 prepared_rows=43 same_len=True same_order=True same_set=True pass=True
-- test: canonical_rows=44 prepared_rows=44 same_len=True same_order=True same_set=True pass=True
-overall_pass=True

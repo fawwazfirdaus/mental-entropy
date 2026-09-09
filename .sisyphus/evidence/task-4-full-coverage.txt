@@ -1,5 +1,0 @@
-Total input: 1025
-Labeled rows: 1025
-Valid rows: 1025
-Coverage: 100.0%
-PASS

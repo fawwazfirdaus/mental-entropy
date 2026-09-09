@@ -1,3 +1,0 @@
-CE model type: LinearGAM
-NE model type: LinearGAM
-PASS: Both models loadable

@@ -1,4 +1,0 @@
-Total CSV: 247
-Clean: 216
-Filtered: 31
-PASS: Filtering applied correctly

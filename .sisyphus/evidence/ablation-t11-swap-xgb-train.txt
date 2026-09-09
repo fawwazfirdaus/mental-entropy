@@ -1,8 +1,0 @@
-{
-  "status": "ok",
-  "artifacts": [
-    "artifacts/ablation/swap/xgb_ce.json",
-    "artifacts/ablation/swap/xgb_ne.json"
-  ],
-  "metadata": "artifacts/ablation/swap/xgb_metadata.json"
-}

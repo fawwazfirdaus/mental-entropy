@@ -67,5 +67,7 @@ logs/
 autoresearch-macos/bert_features_mxbai.json
 autoresearch-macos/bert_features_bge.json
 
-# Local assistant settings
+# Local agent state and experimental outputs
+.sisyphus/
+/artifacts/
 .claude/

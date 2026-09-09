@@ -1,3 +1,0 @@
-{"id": "a", "entropy_analysis": {"entropy_ce": 0.4, "entropy_se": 0.2, "entropy_ne": 0.9, "entropy_cle": 0.45}}
-{"journal_id": "b", "entropy_analysis": {"entropy_ce": 0.2, "entropy_se": 0.8, "entropy_ne": 0.3, "entropy_cle": 0.4}}
-{"id": "c", "entropy_analysis": {"entropy_ce": 0.1, "entropy_se": 0.1, "entropy_ne": 0.1, "entropy_cle": 0.1}}

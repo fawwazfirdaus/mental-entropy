@@ -1,7 +1,0 @@
-MESResult(score=0, raw=0.0, ce=0.0, se=0.0, ne=0.0, cle=0.0)
-MESResult(score=100, raw=1.0, ce=1.0, se=1.0, ne=1.0, cle=1.0)
-ce ce must be a numeric value in [0, 1], got bool
-se se must be a numeric value in [0, 1], got str
-ne ne must be in [0, 1], got -0.01
-cle cle must be in [0, 1], got 1.01
-PASS boundary-and-invalid

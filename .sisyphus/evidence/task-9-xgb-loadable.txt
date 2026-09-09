@@ -1,3 +1,0 @@
-SE model loaded, features: 9
-CLE model loaded, features: 14
-PASS: Both XGB models loadable

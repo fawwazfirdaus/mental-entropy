@@ -1,4 +1,0 @@
-{
-  "status": "ok",
-  "output": "artifacts/ablation/reports/test_swap.json"
-}

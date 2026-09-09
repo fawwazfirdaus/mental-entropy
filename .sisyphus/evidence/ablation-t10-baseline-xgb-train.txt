@@ -1,8 +1,0 @@
-{
-  "status": "ok",
-  "artifacts": [
-    "artifacts/ablation/baseline/xgb_se.json",
-    "artifacts/ablation/baseline/xgb_cle.json"
-  ],
-  "metadata": "artifacts/ablation/baseline/xgb_metadata.json"
-}

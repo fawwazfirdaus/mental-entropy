@@ -1,4 +1,0 @@
-train: 938 rows, all labels valid
-val: 43 rows, all labels valid
-test: 44 rows, all labels valid
-PASS

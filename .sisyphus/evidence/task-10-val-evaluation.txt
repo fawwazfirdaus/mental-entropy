@@ -1,6 +1,0 @@
-=== Val Set Evaluation (43 human entries) ===
-CE: MAE=0.1483, RMSE=0.1725, Spearman=0.1989
-SE: MAE=0.1514, RMSE=0.1854, Spearman=0.2914
-NE: MAE=0.1476, RMSE=0.1759, Spearman=0.3642
-CLE: MAE=0.1342, RMSE=0.1733, Spearman=0.5467
-Evaluation complete

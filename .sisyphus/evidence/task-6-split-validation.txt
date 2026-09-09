@@ -1,5 +1,0 @@
-Train: 938 (synth: 809, human: 129)
-Val: 43 (all human)
-Test: 44 (all human)
-Total: 1025
-PASS

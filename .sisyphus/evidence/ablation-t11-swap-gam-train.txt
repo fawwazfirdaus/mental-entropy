@@ -1,8 +1,0 @@
-{
-  "status": "ok",
-  "artifacts": [
-    "artifacts/ablation/swap/gam_se.joblib",
-    "artifacts/ablation/swap/gam_cle.joblib"
-  ],
-  "metadata": "artifacts/ablation/swap/gam_metadata.json"
-}

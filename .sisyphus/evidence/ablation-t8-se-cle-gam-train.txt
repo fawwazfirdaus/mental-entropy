@@ -1,1 +1,0 @@
-PASS: SE/CLE GAM artifacts and metadata exist

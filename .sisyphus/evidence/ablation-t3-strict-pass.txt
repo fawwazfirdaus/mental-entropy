@@ -1,8 +1,0 @@
-{
-  "status": "ok",
-  "artifacts": [
-    "artifacts/ablation/tmp-pass/xgb_se.json"
-  ],
-  "metadata": "artifacts/ablation/tmp-pass/xgb_metadata.json"
-}
-exit_code=0

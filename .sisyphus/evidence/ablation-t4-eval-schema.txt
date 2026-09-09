@@ -1,1 +1,0 @@
-PASS: baseline/swap evaluator schema parity verified

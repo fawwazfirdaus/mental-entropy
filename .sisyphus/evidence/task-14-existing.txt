@@ -1,5 +1,0 @@
-Command:
-uv run python -c "from mental_entropy import embed_journal_entry, ce_features, ce_features_from_result, se_features, se_features_from_result, ne_features, ne_features_from_result, cle_features, cle_features_from_result; print('existing imports: OK')"
-
-Output:
-existing imports: OK

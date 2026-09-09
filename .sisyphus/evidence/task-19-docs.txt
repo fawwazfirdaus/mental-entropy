@@ -1,2 +1,0 @@
-uv run python -c "from mental_entropy.scoring import score_ce, mes_score; from mental_entropy.scoring.types import SubscoreResult, MESResult; print('DOCS_IMPORTS_OK')"
-DOCS_IMPORTS_OK
